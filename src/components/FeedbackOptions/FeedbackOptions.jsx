@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from './FeedbackOptions.styled';
 import shortid from 'shortid';
+import { Button } from './FeedbackOptions.styled';
 
 export default class FeedbackOptions extends Component {
   feedbackAdd = event => {
@@ -19,11 +19,7 @@ export default class FeedbackOptions extends Component {
             onClick={this.feedbackAdd}
             key={shortid.generate()}
           >
-            {option[0].toUpperCase() +
-              option
-                .split('')
-                .splice(1, option.length - 1)
-                .join('')}
+            {option}
           </Button>
         ))}
       </>
